@@ -1,0 +1,301 @@
+---
+layout: default
+---
+
+<body>
+    <div id="clientData" style="display: none;">{{ site.data.clients | jsonify }}</div>
+    <section class="top-nav">
+        <div id="showWork" class="cta" data-client-name="boa">
+            Work.
+        </div>
+        <div id="showOther" class="cta" data-client-name="other">
+            Other.
+        </div>
+    </section>
+    <section class="triangle-wrapper">
+        <div class="triangle">
+            <div class="phone-holder thing">
+                <img class="yo" src="assets/phone-template.png">
+                <img class="screen"src="assets/boa-homepage-phone.png">
+                <!-- <img class="clip"src="../gif.gif"> -->
+                
+            </div>
+            <div class="phone-holder-horizontal thing">
+                <img src="assets/hand-tv.png" alt="">
+                <img class="clip" src="assets/skate.gif">
+            </div>
+            <canvas id="myCanvas" width="320" height="320"></canvas>
+        </div>
+        <div class="bottom-border">
+            <h2 class="thing-title"></h2>
+        </div>
+        <div class="more-info thing2" id="more">
+            <p>My most recent professional project was building the newly designed Bank of America homepage. Here's some <a href="https://docs.google.com/document/d/e/2PACX-1vTxEpODsLRTOTFk14PUZKzAmMj1jRDj_d9MeOKS8Ho2XKH8-90ZvJGROV8IFg-lagiAA-4eso4T5Zmi/pub">more information about that.</a></p>
+            <p>Check out some other projects I have worked on</p>
+            <p><a href="https://docs.google.com/document/d/e/2PACX-1vSsgYOlBfm6gERyRZx9FqPM54QYacBYjiWCEvimNc9dHYFg4sBh-nI0191JBp4hHVodUyjPK_xWfI_N/pub">BoA Auto Loans Research Experience</a></p>
+            <p><a href="https://docs.google.com/document/d/e/2PACX-1vQLAm_aP_cV-1q_X_OX7eAdJbWOdzHh3lBLteJSPFP1oGcOUTzbEfo_28fshAvMgPL6bthbamcJyOAm/pub">BoA Auto Loan Application SPA</a></p>
+            <p>United Way Volunteer Matching App</p>
+            <p>Also, here is my Resume</p>
+       </div>
+        <div class="more-info-other thing2"i id="more2">
+            <p> I like to do other things too.
+            <p> In addition to STEM, I really enjoy skateboarding.</p>
+            <p> When I'm not building softare or skating, you can most likely find me playing classical guitar or hanging with my wife and lazy ass dog</p>
+            <p>Here is my <a href="/blog">blog</a></p>
+        </div>
+    </section>
+    <section class="about">
+        <h2>Developer / Skater</h2><br>
+        <div class="image-container">
+            <img class="butters" src="assets/butters.png">
+        </div>
+        <p>Hey, my name is Johnny. I like to skateboard, make music, tinker with electronics and develop software. I’ve been doing these things in some way or another since I was a kid, so I guess that makes them some of my favorite things!
+                
+                Through exploring my favorite things, I have come to realize that my ultimate favorite thing is Science and trying to understand as much as possible about what’s going on around here.</p>
+    </section>
+
+</body>
+
+
+<script>
+    (function(){
+      // Get the title and JSON data from the data folder
+      var title = document.getElementById('title');
+      var data = JSON.parse(document.getElementById('clientData').innerText);
+  
+      // Get the buttons that opens the title
+      var ctaLinks = [].slice.call(document.querySelectorAll(".cta"));
+      // Get the <span> element that closes the title
+    //   var span = document.getElementsByClassName("close")[0];
+  
+      // When the user clicks on the button, open the title 
+      ctaLinks.forEach( (link) => {
+        link.addEventListener("click", clientClickHandler.bind(this));
+      })
+  
+      // When the user clicks on <span> (x), close the title
+    //   span.onclick = function() {
+    //       title.classList.remove('active');
+    //       title.className += ' inactive';
+    //   }
+  
+      // When the user clicks anywhere outside of the title, close it
+    //   window.onclick = function(event) {
+    //       if (event.target == title) {
+    //           title.classList.remove('active');
+    //           title.className += ' inactive';
+    //       }
+    //   }
+    // var work = document.querySelector('#more');
+    // var other = document.querySelector('#more2')
+      function clientClickHandler(clientLink) {
+        //   console.log('fuuuuuuuuuuuuuu')
+        const clientName = clientLink.target.dataset.clientName;
+        const titleSpan = document.querySelector('.thing-title');
+        titleSpan.innerHTML = '';
+  
+        clientData = data[clientName];
+        titleSpan.innerHTML = clientData.title;
+
+
+        // const div = document.createElement('div');
+        // clientData.elements.forEach( (el) => {
+        //   htmlContent = (el.type == 'p' || el.type == 'title') ? `<br>${el.content}<br>` : `<br>${el.content}`
+        //   div.innerHTML += el;
+        // })
+  
+        // document.querySelector('#more').appendChild(div);
+        // title.classList.remove('inactive');
+        // title.className += ' active';
+      }
+    })();
+  </script>
+
+
+
+
+
+<script>
+
+document.getElementById('showWork').addEventListener('click', function(event){
+  event.preventDefault();
+  document.querySelector('.phone-holder').classList.toggle('active');
+  document.querySelector('.more-info').classList.toggle('active');
+
+  document.querySelector('.bottom-border').classList.toggle('active');
+});
+
+document.getElementById('showOther').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    document.querySelector('.phone-holder-horizontal').classList.toggle('active');
+    document.querySelector('.more-info-other').classList.toggle('active');
+    // document.querySelector('.more-info').style.display = "none";
+    document.querySelector('.bottom-border').classList.toggle('active');
+
+})
+document.querySelectorAll('.thing').forEach(function(el) {
+
+    el.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        document.querySelectorAll('.thing').forEach(function(el) {
+            el.classList.remove('active');
+        });
+        document.querySelectorAll('.thing2').forEach(function(el){
+            el.classList.remove('active')
+        })
+        document.querySelector('.bottom-border').classList.remove('active');
+        document.querySelector('.thing-title').innerHTML = '';
+    })
+
+});
+
+
+var particles = [];
+var particleCount = 30;
+var maxVelocity = 2;
+var targetFPS = 35;
+var canvasWidth = 400;
+var canvasHeight = 400;
+
+var imageObj = new Image();
+imageObj.onload = function() {
+   	particles.forEach(function(particle) {
+            particle.setImage(imageObj);
+    });
+};
+
+imageObj.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/807677/smoke.png";
+
+function Particle(context) {
+    this.x = 0;
+    this.y = 0;
+    this.xVelocity = 0;
+    this.yVelocity = 0;
+    this.radius = 5;
+    this.context = context;
+    this.draw = function() {
+        if(this.image){
+            this.context.drawImage(this.image, this.x-128, this.y-128);                        
+            return;
+        }
+
+        this.context.beginPath();
+        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI, false);
+        this.context.fillStyle = "rgba(0, 255, 255, 1)";
+        this.context.fill();
+        this.context.closePath();
+    };
+
+    this.update = function() {
+        this.x += this.xVelocity;
+        this.y += this.yVelocity;
+
+        if (this.x >= canvasWidth) {
+            this.xVelocity = -this.xVelocity;
+            this.x = canvasWidth;
+        }
+
+        else if (this.x <= 0) {
+            this.xVelocity = -this.xVelocity;
+            this.x = 0;
+        }
+
+        if (this.y >= canvasHeight) {
+            this.yVelocity = -this.yVelocity;
+            this.y = canvasHeight;
+        }
+        
+        else if (this.y <= 0) {
+            this.yVelocity = -this.yVelocity;
+            this.y = 0;
+        }
+    };
+
+
+    this.setPosition = function(x, y) {
+        this.x = x;
+        this.y = y;
+    };
+
+
+    this.setVelocity = function(x, y) {
+        this.xVelocity = x;
+        this.yVelocity = y;
+    };
+    
+    this.setImage = function(image){
+        this.image = image;
+    }
+}
+
+function generateRandom(min, max){
+    return Math.random() * (max - min) + min;
+}
+
+var context;
+function init() {
+    var canvas = document.getElementById('myCanvas');
+    if (canvas.getContext) {
+        context = canvas.getContext('2d');
+        for(var i=0; i < particleCount; ++i){
+            var particle = new Particle(context);
+            particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+            particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+            particles.push(particle);            
+        }
+    }
+    else {
+        alert("Please update your browser!");
+    }
+}
+
+function draw() {
+    context.fillStyle = "rgba(0, 0, 0, 0.5)";
+    context.fillRect(0, 0, 400, 400);
+    particles.forEach(function(particle) {
+        particle.draw();
+    });
+}
+
+
+function update() {
+    particles.forEach(function(particle) {
+        particle.update();
+    });
+}
+
+
+init();
+
+if (context) {
+    setInterval(function() {
+        update();
+        draw();
+    }, 1000 / targetFPS);
+}
+</script>
+
+
+<!-- <script>
+    (function(){
+      // Get the title and JSON data from the data folder
+      var data = JSON.parse(document.getElementById('clientData').innerText);
+  
+      // Get the buttons that opens the title
+      var ctaLinks = [].slice.call(document.querySelectorAll(".client-link"));
+  
+      // When the user clicks on the button, open the title 
+      ctaLinks.forEach( (link) => {
+        link.addEventListener("click", clientClickHandler.bind(this));
+      })
+ 
+     function clientClickHandler(clientLink) {
+        const clientName = clientLink.target.dataset.clientName;
+  
+        clientData = data[clientName];
+        let div = document.createElement('div');
+      }
+    })();
+</script> -->

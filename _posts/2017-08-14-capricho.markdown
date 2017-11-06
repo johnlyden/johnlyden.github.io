@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Monday Night Update"
+date:   2017-08-14 19:45:31 +0530
+categories: ["news"]
+author: "Johnny"
+---
+
+Hey there - quick update.
+
+I told myself I would write a blog post and here it is.  What's the point of this post?  Nothing really.  [Trello](https://trello.com/) is not only a damn agile tool, but its also a good ToDo app.  I've been using it a lot lately to get ready for our move to Austin, Texas. I can organize the things I have to do and just put the shit on a card along with links to stuff.
+
+SO yeah, as a person wanting to be a little more organized, Trello seems to be a good solution for making that happen...have a good night!
