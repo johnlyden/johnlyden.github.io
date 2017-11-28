@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Change My View"
+date:   2017-11-28 12:00:31 +0500
+categories: ["news"]
+author: "Johnny"
+---
+
+Its hard to hear an argument that goes against something you think you believe and be open to hearing that side of things clearly.  Theres this subreddit called [change my view](https://www.reddit.com/r/changemyview/) and its really cool becasue its a forum to have discussions about really polarizing topics in a way that just tries to explain each side in a rational, factual manner.  There are specific rules to the subreddit that are meant to eliminate any type of non-productive discussion.  I really like
+it. 
+
+
