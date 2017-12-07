@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Working on some stuff"
+date:   2017-11-28 12:00:31 +0500
+categories: ["news"]
+author: "Johnny"
+---
+
+Hey there - just dropping by for a quick update.  My wife and I are working on an react application together!  
