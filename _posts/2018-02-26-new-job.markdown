@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "New Job inAustin"
+date:   2018-02-26 10:45:31 +0530
+categories: ["news"]
+author: "Johnny"
+---
+
+Welp - today is the first day of my 2 week break between leaving my last gig at Bank of America and starting my new gig at a cool company called [Everlywell](https://www.everlywell.com/) right here in Austin, Texas.  
+
+Since we last spoke, my wifey and I built a cool little app called [Chane my View](http://challenge-my-opinion.herokuapp.com/) which is a reader for the popular sub-reddit that goes by the same name.  Its really cool to build something wit ya baby.
