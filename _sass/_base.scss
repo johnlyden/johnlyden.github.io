@@ -1,461 +1,210 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
 }
-
-
 
 /**
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  vertical-align: middle;
 }
-
-
 
 /**
  * Figures
  */
 figure > img {
-    display: block;
+  display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+  font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
  */
-ul, ol {
-    margin-left: $spacing-unit;
+ul,
+ol {
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
  */
 a {
-    color: $brand-color;
-    text-decoration: none;
+  color: $brand-color;
+  text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
 
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
 }
-
-
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
-
-
 
 /**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
 }
-
-
 
 /**
  * Clearfix
  */
 %clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
-
-
 
 /**
  * Icons
  */
 .icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
+    path {
+      fill: $grey-color;
     }
-}
-
-img.butters {
-    width: 50%;
-}
-.image-container {
-    margin-bottom: 20px;
-}
-.cta {
-    background: transparent;
-    border: 1px solid black;
-}
-.about {
-    text-align: center;
-}
-
-h2 {
-    margin:  0;
-}
-.bottom-border {
-    height: 36px;
-    background: white;
-    /* background: linear-gradient(#d64f55, #F44336); */
-    z-index: 2;
-    text-align: center;
-    position: relative;
-    transition: 2s all ease-in-out;
-}
-.bottom-border h2 {
-    opacity: 0;
-    transition: 1.4s all ease-in-out;
-}
-
-.bottom-border.active {
-    /* background: linear-gradient(#7c6d9a, #89698f); */
-    transition: 2s all ease-in-out;
-}
-
-.bottom-border.active h2{
-    /* background: linear-gradient(#7177b0, #7d72a6); */
-    opacity: 1; 
-    transition: 2s all ease-in-out 2s;
-    margin-top: 10px;
-}
-.more-info {
-    max-width: 470px;
-    padding: 0 20px;
-    text-align: center;
-    margin: 0 auto;
-    height: 0px;
-    opacity: 0;
-    visibility: hidden;
-    transition: height 1.5s ease-in-out .5s, opacity 1s ease-in-out;
-}
-
-
-.more-info.active {
-    transition: height 1.5s ease-in-out, opacity 2.5s ease-in-out 1s;
-    height: 320px;
-    visibility: visible;
-    opacity: 1;
-}
-
-.more-info-other {
-    max-width: 470px;
-    padding: 0 20px;
-    text-align: center;
-    margin: 0 auto;
-    height: 0px;
-    opacity: 0;
-    transition: height 1.5s ease-in-out .5s, opacity 1s ease-in-out;
-}
-
-
-.more-info-other.active {
-    transition: height 1.5s ease-in-out, opacity 2.5s ease-in-out 1s;
-    height: 250px;
-    opacity: 1;
-}
-.about {
-    /* background: #F44336; */
-    padding: 0 1em 1em 1em;
-}
-.header {
-    height: 90px;
-    text-align: center;
-    /* background: linear-gradient(#FFEDBC, #2196f3); */
-}
-.top-nav {
-    /* background: #2196f3; */
-    padding: 0 1em;
-    margin-bottom: 1em;
-}
-.title {
-    font-size: 32px;
-}
-
-.triangle {
-    position: relative;
-    max-width: 320px;
-    margin: 0 auto;
-}
-.triangle-wrapper {
-    /* background: linear-gradient(#2196f3, #F44336); */
-}
-
-
-
-@media screen and (min-width: 1025px) {
-
-}
-
-
-/* .thing {
-  height: 75px;
-}
-.thing.active {
-  height: 404px;
-} */
-
-
-
-/* sunset gradient */
-.phone-holder {
-    display: block;
-    margin: auto;
-    position: absolute;
-    width: 50px;
-    z-index: 1;
-    bottom: -10%;
-    right: 10%;
-    /* maybe make the phone shake by repeat left/right up/down movements simultaneously */
-    transition: right 1.5s cubic-bezier(0.25, 0.1, 0.25, 1), 
-    opacity 1.5s ease-in-out 2s,
-    width 2s ease-in-out 1s,
-    bottom 1s ease-in-out 1s;
-    /* left: 46%; */
-    /* top: 85px; */
-    opacity: 0;
-}
-.phone-holder.active {
-    opacity: 1;
-    bottom: 0;
-    right: 50px;
-    /* background-color: red; */
-    width: 270px;
-    transition: right 1.5s cubic-bezier(0.17, 0.67, 0.34, .13), 
-    opacity 1s ease-in, 
-    width 2s ease-in-out 1s,
-    bottom 1s ease-in-out 1s;
-    /* transition: max-width 1s ease-in 0s; */
-    /* -webkit-animation: 2s ease-in 0s normal forwards 1 fadein; 
-    animation: 2s ease-in 0s normal forwards 1 fadein; */
-
-
-}
-
-/* sunset gradient */
-.phone-holder-horizontal {
-    display: block;
-    margin: auto;
-    position: absolute;
-    width: 50px;
-    z-index: 1;
-    bottom: -10%;
-    left: 122px;
-    transition: bottom 1.5s cubic-bezier(.17,.67,.34,.13) .8s, opacity 2.5s ease-in-out 1.5s, width 1.5s ease-in-out 1s, left 1.5s ease-in-out 1s;
-
-    /* left: 100px; */
-    /* maybe make the phone shake by repeat left/right up/down movements simultaneously */
-    /* transition: left 1.5s ease-in, 
-    opacity 2.5s ease-in-out 2s,
-    width 2s ease-in-out 1s, */
-    /* bottom 1s ease-in-out 1s; */
-    /* left: 46%; */
-    /* top: 85px; */
-    opacity: 0;
-}
-.phone-holder-horizontal.active {
-    opacity: 1;
-    bottom: 0%;
-    left: 28px;
-    width: 250px;
-    transition: bottom 1.5s cubic-bezier(.17, .67, .34, .13) .8s, opacity 2.5s ease-in-out, width 1.5s ease-in-out 1s, left 1.5s ease-in-out 1s;
-    /* transition: left 2.5s ease-in 2s, 
-    opacity 2s ease-in, 
-    width 2s ease-in-out 1s,
-    bottom 1s ease-in-out 1s; */
-    /* transition: max-width 1s ease-in 0s; */
-    /* -webkit-animation: 2s ease-in 0s normal forwards 1 fadein; 
-    animation: 2s ease-in 0s normal forwards 1 fadein; */
-
-
-}
-
-
-
-img.screen {
-    width: 100%;
-    z-index: -1;
-    bottom: 0px;
-    right: 0px;
-    position: absolute;
-}
-img.clip {
-    width: 83%;
-    right: 10%;
-    z-index: -1;
-    position: absolute;
-    /* bottom: 3px; */
-    top: 0;
-}
-
-img.hand {
-    width: 80%;
-    z-index: -2;
-    position: absolute;
-    bottom: 0px;
-}
-
-img {
-  max-width: 100%;
-  /* vertical-align: middle; */
-}
-
-#myCanvas{
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    display: block;
-    margin: 0 auto;
-}
-
-.triangle:after {
-    content:"";
-position:absolute;
-width:100%;
-bottom:1px;
-z-index:-1;
-transform:scale(.9);
-box-shadow: 0px 0px 8px 2px #000000;
-}
-.top-nav {
-    /* background: black; */
-    display: grid;
-    /* grid-template-columns: 1fr 2fr 1fr; fr are like fractions */
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 1em;
-    /* grid-auto-rows: 100px; */
-    grid-auto-rows: minmax(50px, auto);
-    grid-auto-columns: minmax(100px, auto);
-}
-.top-nav > div{
-  /* background: #eee; */
-  padding: 1em;
-  text-align: center;
+  }
 }

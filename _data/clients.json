@@ -1,9 +1,8 @@
 {
-    "boa": {
-        "title": "Professional Work"
-  
-    },
-    "other": {
-        "title": "Other stuff"
-    } 
+  "boa": {
+    "title": "Professional Work"
+  },
+  "other": {
+    "title": "Other stuff"
+  }
 }

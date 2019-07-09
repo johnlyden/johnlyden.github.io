@@ -1,236 +1,197 @@
-// img.butters {
-//     width: 50%;
-// }
-// .image-container {
-//     margin-bottom: 20px;
-// }
-// .cta {
-//     background: transparent;
-//     border: 1px solid black;
-// }
-// .about {
-//     text-align: center;
-// }
+img.butters {
+  width: 50%;
+}
 
-// h2 {
-//     margin:  0;
-// }
-// .bottom-border {
-//     height: 36px;
-//     background: white;
-//     /* background: linear-gradient(#d64f55, #F44336); */
-//     z-index: 2;
-//     text-align: center;
-//     position: relative;
-//     transition: 2s all ease-in-out;
-// }
-// .bottom-border h2 {
-//     opacity: 0;
-//     transition: 1.4s all ease-in-out;
-// }
+.image-container {
+  margin-bottom: 20px;
+}
 
-// .bottom-border.active {
-//     /* background: linear-gradient(#7c6d9a, #89698f); */
-//     transition: 2s all ease-in-out;
-// }
+.about {
+  text-align: center;
+}
 
-// .bottom-border.active h2{
-//     /* background: linear-gradient(#7177b0, #7d72a6); */
-//     opacity: 1; 
-//     transition: 2s all ease-in-out 2s;
-//     margin-top: 10px;
-// }
-// .more-info {
-//     max-width: 470px;
-//     padding: 0 20px;
-//     text-align: center;
-//     margin: 0 auto;
-//     height: 0px;
-//     opacity: 0;
-//     transition: height 1.5s ease-in-out .5s, opacity 1s ease-in-out;
-// }
+h2 {
+  margin: 0;
+}
 
+.bottom-border {
+  height: 36px;
+  background: white;
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  transition: 2s all ease-in-out;
+}
+.bottom-border h2 {
+  opacity: 0;
+  transition: 1.4s all ease-in-out;
+}
 
-// .more-info.active {
-//     transition: height 1.5s ease-in-out, opacity 2.5s ease-in-out 1s;
-//     height: 300px;
-//     opacity: 1;
-// }
+.bottom-border.active {
+  transition: 2s all ease-in-out;
+}
 
-// .more-info-other {
-//     max-width: 470px;
-//     padding: 0 20px;
-//     text-align: center;
-//     margin: 0 auto;
-//     height: 0px;
-//     opacity: 0;
-//     transition: height 1.5s ease-in-out .5s, opacity 1s ease-in-out;
-// }
+.bottom-border.active h2 {
+  opacity: 1;
+  transition: 2s all ease-in-out 2s;
+  margin-top: 10px;
+}
 
+.more-info {
+  max-width: 470px;
+  padding: 0 20px;
+  text-align: center;
+  margin: 0 auto;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: height 1.5s ease-in-out 0.5s, opacity 1s ease-in-out;
+}
 
-// .more-info-other.active {
-//     transition: height 1.5s ease-in-out, opacity 2.5s ease-in-out 1s;
-//     height: 300px;
-//     opacity: 1;
-// }
-// .about {
-//     /* background: #F44336; */
-//     padding: 0 1em 1em 1em;
-// }
-// .header {
-//     height: 90px;
-//     text-align: center;
-//     /* background: linear-gradient(#FFEDBC, #2196f3); */
-// }
-// .top-nav {
-//     /* background: #2196f3; */
-//     padding: 0 1em;
-//     margin-bottom: 1em;
-// }
-// .title {
-//     font-size: 32px;
-// }
+.more-info.active {
+  transition: height 1.5s ease-in-out, opacity 2.5s ease-in-out 1s;
+  height: 320px;
+  visibility: visible;
+  opacity: 1;
+}
 
-// .triangle {
-//     position: relative;
-//     max-width: 320px;
-//     margin: 0 auto;
-// }
-// .triangle-wrapper {
-//     /* background: linear-gradient(#2196f3, #F44336); */
-// }
+.more-info-other {
+  max-width: 470px;
+  padding: 0 20px;
+  text-align: center;
+  margin: 0 auto;
+  height: 0px;
+  opacity: 0;
+  transition: height 1.5s ease-in-out 0.5s, opacity 1s ease-in-out;
+}
 
+.more-info-other.active {
+  transition: height 1.5s ease-in-out, opacity 2.5s ease-in-out 1s;
+  height: 250px;
+  opacity: 1;
+}
 
+.about {
+  padding: 0 1em 1em 1em;
+}
 
-// @media screen and (min-width: 1025px) {
+.header {
+  height: 90px;
+  text-align: center;
+}
 
-// }
+.title {
+  font-size: 32px;
+}
 
+.triangle {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+}
 
-// /* .thing {
-//   height: 75px;
-// }
-// .thing.active {
-//   height: 404px;
-// } */
+/* sunset gradient */
+.phone-holder {
+  display: block;
+  margin: auto;
+  position: absolute;
+  width: 50px;
+  z-index: 1;
+  bottom: -10%;
+  right: 10%;
+  transition: right 1.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+    opacity 1.5s ease-in-out 2s, width 2s ease-in-out 1s,
+    bottom 1s ease-in-out 1s;
+  opacity: 0;
+}
+.phone-holder.active {
+  opacity: 1;
+  bottom: 0;
+  right: 50px;
+  width: 270px;
+  transition: right 1.5s cubic-bezier(0.17, 0.67, 0.34, 0.13),
+    opacity 1s ease-in, width 2s ease-in-out 1s, bottom 1s ease-in-out 1s;
+}
 
+/* sunset gradient */
+.phone-holder-horizontal {
+  display: block;
+  margin: auto;
+  position: absolute;
+  width: 50px;
+  z-index: 1;
+  bottom: -10%;
+  left: 122px;
+  transition: bottom 1.5s cubic-bezier(0.17, 0.67, 0.34, 0.13) 0.8s,
+    opacity 2.5s ease-in-out 1.5s, width 1.5s ease-in-out 1s,
+    left 1.5s ease-in-out 1s;
+  opacity: 0;
+}
+.phone-holder-horizontal.active {
+  opacity: 1;
+  bottom: 0%;
+  left: 28px;
+  width: 250px;
+  transition: bottom 1.5s cubic-bezier(0.17, 0.67, 0.34, 0.13) 0.8s,
+    opacity 2.5s ease-in-out, width 1.5s ease-in-out 1s,
+    left 1.5s ease-in-out 1s;
+}
 
+img.screen {
+  width: 100%;
+  z-index: -1;
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+}
+img.clip {
+  width: 83%;
+  right: 10%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
 
-// /* sunset gradient */
-// .phone-holder {
-//     display: block;
-//     margin: auto;
-//     position: absolute;
-//     width: 50px;
-//     z-index: 1;
-//     bottom: -10%;
-//     right: 10%;
-//     /* maybe make the phone shake by repeat left/right up/down movements simultaneously */
-//     transition: right 1.5s cubic-bezier(0.25, 0.1, 0.25, 1), 
-//     opacity 1.5s ease-in-out 2s,
-//     width 2s ease-in-out 1s,
-//     bottom 1s ease-in-out 1s;
-//     /* left: 46%; */
-//     /* top: 85px; */
-//     opacity: 0;
-// }
-// .phone-holder.active {
-//     opacity: 1;
-//     bottom: 0;
-//     right: 50px;
-//     /* background-color: red; */
-//     width: 270px;
-//     transition: right 1.5s cubic-bezier(0.17, 0.67, 0.34, .13), 
-//     opacity 1s ease-in, 
-//     width 2s ease-in-out 1s,
-//     bottom 1s ease-in-out 1s;
-//     /* transition: max-width 1s ease-in 0s; */
-//     /* -webkit-animation: 2s ease-in 0s normal forwards 1 fadein; 
-//     animation: 2s ease-in 0s normal forwards 1 fadein; */
+img.hand {
+  width: 80%;
+  z-index: -2;
+  position: absolute;
+  bottom: 0px;
+}
 
+img {
+  max-width: 100%;
+}
 
-// }
+#myCanvas {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  display: block;
+  margin: 0 auto;
+}
 
-// /* sunset gradient */
-// .phone-holder-horizontal {
-//     display: block;
-//     margin: auto;
-//     position: absolute;
-//     width: 50px;
-//     z-index: 1;
-//     bottom: -10%;
-//     left: 122px;
-//     transition: bottom 1.5s cubic-bezier(.17,.67,.34,.13) .8s, opacity 2.5s ease-in-out 1.5s, width 1.5s ease-in-out 1s, left 1.5s ease-in-out 1s;
+.triangle:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: 1px;
+  z-index: -1;
+  transform: scale(0.9);
+  box-shadow: 0px 0px 8px 2px #000000;
+}
 
-//     /* left: 100px; */
-//     /* maybe make the phone shake by repeat left/right up/down movements simultaneously */
-//     /* transition: left 1.5s ease-in, 
-//     opacity 2.5s ease-in-out 2s,
-//     width 2s ease-in-out 1s, */
-//     /* bottom 1s ease-in-out 1s; */
-//     /* left: 46%; */
-//     /* top: 85px; */
-//     opacity: 0;
-// }
-// .phone-holder-horizontal.active {
-//     opacity: 1;
-//     bottom: 0%;
-//     left: 28px;
-//     width: 250px;
-//     transition: bottom 1.5s cubic-bezier(.17, .67, .34, .13) .8s, opacity 2.5s ease-in-out, width 1.5s ease-in-out 1s, left 1.5s ease-in-out 1s;
-//     /* transition: left 2.5s ease-in 2s, 
-//     opacity 2s ease-in, 
-//     width 2s ease-in-out 1s,
-//     bottom 1s ease-in-out 1s; */
-//     /* transition: max-width 1s ease-in 0s; */
-//     /* -webkit-animation: 2s ease-in 0s normal forwards 1 fadein; 
-//     animation: 2s ease-in 0s normal forwards 1 fadein; */
+.top-nav {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 1em;
+  grid-auto-rows: minmax(50px, auto);
+  grid-auto-columns: minmax(100px, auto);
+  margin-bottom: 1em;
+}
 
-
-// }
-
-
-
-// img.screen {
-//     width: 100%;
-//     z-index: -1;
-//     bottom: 0px;
-//     right: 0px;
-//     position: absolute;
-// }
-// img.clip {
-//     width: 83%;
-//     right: 10%;
-//     z-index: -1;
-//     position: absolute;
-//     /* bottom: 3px; */
-//     top: 0;
-// }
-
-// img.hand {
-//     width: 80%;
-//     z-index: -2;
-//     position: absolute;
-//     bottom: 0px;
-// }
-
-// img {
-//   max-width: 100%;
-//   /* vertical-align: middle; */
-// }
-
-// #myCanvas{
-//     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-//     display: block;
-//     margin: 0 auto;
-// }
-
-// .triangle:after {
-//     content:"";
-// position:absolute;
-// width:100%;
-// bottom:1px;
-// z-index:-1;
-// transform:scale(.9);
-// box-shadow: 0px 0px 8px 2px #000000;
-// }
+.nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid black;
+}
