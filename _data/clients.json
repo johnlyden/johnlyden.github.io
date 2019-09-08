@@ -1,8 +1,10 @@
-{
-  "boa": {
-    "title": "Professional Work"
+[
+  {
+    "title": "work",
+    "id": "showWork"
   },
-  "other": {
-    "title": "Other stuff"
+  {
+    "title": "other",
+    "id": "showOther"
   }
-}
+]
