@@ -1,5 +1,9 @@
 img.butters {
-  width: 50%;
+  width: 100%;
+
+  @media screen and (min-width: 700px) {
+    width: 50%;
+  }
 }
 
 .image-container {
